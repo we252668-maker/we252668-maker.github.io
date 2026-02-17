@@ -1,100 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>About This Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>About Me</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f6f8;
-            color: #333;
-            line-height: 1.6;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
 
-        header {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+.header {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 42px;
-        }
+.header h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        h2 {
-            color: #203a43;
-            margin-top: 40px;
-        }
+.section {
+    background: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
 
-        ul {
-            margin-top: 10px;
-        }
+h2 {
+    margin-top: 0;
+    color: #333;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #203a43;
-            color: white;
-            margin-top: 60px;
-        }
+ul {
+    padding-left: 20px;
+    line-height: 1.8;
+}
 
-        a {
-            color: #00aaff;
-            text-decoration: none;
-        }
-    </style>
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #00c6ff;
+    color: black;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #00ffcc;
+    transform: translateY(-3px);
+}
+
+.footer {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>Firmware Learning Journey</h1>
-    <p>Embedded Systems • MCU • RTOS • Technical English</p>
-</header>
+<div class="header">
+    <h1>About Me</h1>
+    <p>Embedded Systems • Firmware • IoT Security</p>
+</div>
 
 <div class="container">
 
-    <h2>About This Blog</h2>
-    <p>
-        This website documents my journey toward becoming a professional firmware engineer.
-        With an engineering background, I am focusing on strengthening my knowledge in embedded systems,
-        microcontroller programming, and system integration.
-    </p>
+    <div class="section">
+        <h2>競賽與展覽經歷</h2>
+        <ul>
+            <li>2017 全國自走車競速暨機器人創意大賽</li>
+            <li>2017 全國二足機器人競賽</li>
+            <li>第十二屆盛群杯競賽－化學職災感測安全帽</li>
+            <li>2018 台灣技術創新博覽會－能源轉換效率量測系統</li>
+            <li>2018 台灣技術創新博覽會－環境與綠能監控系統</li>
+            <li>2018 台灣技術創新博覽會－能夠檢測化學物質的安全帽（銅牌）</li>
+            <li>參加第35屆資訊安全會議</li>
+        </ul>
+    </div>
 
-    <h2>What You Will Find Here</h2>
-    <ul>
-        <li>Firmware development notes</li>
-        <li>MCU architecture learning</li>
-        <li>UART, SPI, I2C communication protocols</li>
-        <li>RTOS concepts</li>
-        <li>Technical English vocabulary</li>
-        <li>Project records and experiments</li>
-    </ul>
+    <div class="section">
+        <h2>專利成果</h2>
+        <ul>
+            <li>中華民國專利 M566336－環境與綠能監控系統</li>
+            <li>中華民國專利 M568053－能夠檢測化學物質的安全帽</li>
+            <li>中華民國專利 M566355－能源轉換效率量測系統</li>
+        </ul>
+    </div>
 
-    <h2>My Goal</h2>
-    <p>
-        My goal is to build strong practical skills in firmware engineering and continuously
-        improve my technical reading ability. This blog serves as both a learning record and
-        a professional portfolio.
-    </p>
+    <div class="section">
+        <h2>工作經歷</h2>
+        <ul>
+            <li>海德威－單晶片工程師</li>
+            <li>多電－電子工程師</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>研習與進修</h2>
+        <ul>
+            <li>目前就讀逢甲大學研究所</li>
+            <li>物聯網裝置開發者教育訓練－物聯網資安韌性強化</li>
+            <li>無人機資安實務研習</li>
+            <li>資安協會研習－工業物聯網(IIOT)資安挑戰</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>聯絡方式</h2>
+        <p>Email: we25266855@gmail.com</p>
+
+        <a href="index.html" class="btn">Enter Blog</a>
+    </div>
 
 </div>
 
-<footer>
-    © 2026 Jason | Firmware Engineer in Progress
-</footer>
+<div class="footer">
+    © 2026 Firmware Learning Journey
+</div>
 
 </body>
 </html>
