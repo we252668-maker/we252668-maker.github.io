@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>What is Arduino?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1f4037, #99f2c8);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: #203a43;
+        }
+
+        code {
+            background: #eee;
+            padding: 4px 8px;
+            border-radius: 5px;
+        }
+
+        .arduino-img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background: #00c6ff;
+            color: black;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .back-btn:hover {
+            background: #00ffcc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="hero">
+    <h1>What is Arduino?</h1>
+    <p>From Beginner Board to Real Firmware Engineering</p>
+</div>
+
+<div class="container">
+
+    <div class="section">
+        <h2>1. Arduino Physical Board</h2>
+
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Arduino_Uno_-_R3.jpg" class="arduino-img">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Arduino_Uno_R3_Front.jpg" class="arduino-img">
+
+        <p>
+            Arduino is a microcontroller development board.
+            The most common version is Arduino Uno.
+        </p>
+
+        <p>
+            It includes:
+        </p>
+
+        <ul>
+            <li>ATmega328P Microcontroller</li>
+            <li>Digital I/O Pins</li>
+            <li>Analog Input Pins</li>
+            <li>USB Interface</li>
+            <li>Power Regulation Circuit</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Inside Arduino – MCU Architecture</h2>
+
+        <p>
+            The core of Arduino Uno is the ATmega328P MCU.
+        </p>
+
+        <p>
+            A microcontroller typically contains:
+        </p>
+
+        <ul>
+            <li><b>CPU</b> – Executes instructions</li>
+            <li><b>Flash Memory</b> – Stores program code</li>
+            <li><b>SRAM</b> – Temporary data storage</li>
+            <li><b>EEPROM</b> – Non-volatile memory</li>
+            <li><b>GPIO</b> – Digital Input/Output</li>
+            <li><b>Timers</b> – Generate delays and PWM</li>
+            <li><b>ADC</b> – Convert analog signals to digital</li>
+            <li><b>UART / SPI / I2C</b> – Communication interfaces</li>
+        </ul>
+
+        <p>
+            When you write Arduino code, it is compiled into machine code
+            and stored inside the Flash memory of the MCU.
+        </p>
+
+        <p>
+            The CPU then executes instructions line by line.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>3. Example Code – LED Blink</h2>
+
+<pre>
+<code>
+void setup() {
+  pinMode(13, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(13, HIGH);
+  delay(1000);
+  digitalWrite(13, LOW);
+  delay(1000);
+}
+</code>
+</pre>
+
+        <p>
+            This simple program uses:
+        </p>
+
+        <ul>
+            <li>GPIO Control</li>
+            <li>Timer Delay</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>4. From Arduino to Professional Firmware</h2>
+
+        <p>
+            Arduino simplifies embedded programming,
+            but real firmware engineers must understand:
+        </p>
+
+        <ul>
+            <li>Register-level programming</li>
+            <li>Interrupt handling</li>
+            <li>RTOS concepts</li>
+            <li>Memory optimization</li>
+            <li>Power management</li>
+        </ul>
+
+        <p>
+            Arduino is the first step toward deeper embedded system development.
+        </p>
+    </div>
+
+    <a href="index.html" class="back-btn">← Back to Home</a>
+
+</div>
+
+</body>
+</html>
