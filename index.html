@@ -28,6 +28,24 @@
         .hero p {
             font-size: 20px;
             color: #dddddd;
+            margin-bottom: 30px;
+        }
+
+        /* 按鈕樣式 */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #00c6ff;
+            color: black;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #00ffcc;
+            transform: translateY(-3px);
         }
 
         /* 文章區 */
@@ -67,6 +85,9 @@
 <div class="hero">
     <h1>Firmware Learning Journey</h1>
     <p>Embedded Systems • MCU • RTOS • Technical English</p>
+
+    <!-- 新增按鈕 -->
+    <a href="about.html" class="btn">About Me</a>
 </div>
 
 <!-- 文章列表 -->
