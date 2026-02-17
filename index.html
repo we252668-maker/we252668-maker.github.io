@@ -1,77 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
-    <title>Firmware Learning Journey</title>
+    <title>Firmware Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
+            background: #f4f6f9;
+        }
+
+        /* 封面區 */
+        .hero {
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: white;
             text-align: center;
+            padding: 100px 20px;
         }
 
-        .hero {
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        h1 {
+        .hero h1 {
             font-size: 48px;
             margin-bottom: 10px;
         }
 
-        h2 {
-            font-weight: normal;
-            color: #cccccc;
+        .hero p {
+            font-size: 20px;
+            color: #dddddd;
         }
 
-        .btn {
-            margin-top: 30px;
-            padding: 12px 25px;
-            font-size: 18px;
-            background-color: #00c6ff;
-            border: none;
-            border-radius: 30px;
-            cursor: pointer;
+        /* 文章區 */
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .post {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .post h3 {
+            margin: 0 0 10px 0;
+        }
+
+        .post a {
             text-decoration: none;
-            color: black;
-            font-weight: bold;
-            transition: 0.3s;
+            color: #0077cc;
         }
 
-        .btn:hover {
-            background-color: #00ffcc;
+        .post a:hover {
+            text-decoration: underline;
         }
 
-        .footer {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            font-size: 14px;
-            color: #aaaaaa;
-        }
     </style>
 </head>
 
 <body>
 
+<!-- 封面 -->
 <div class="hero">
     <h1>Firmware Learning Journey</h1>
-    <h2>Embedded Systems • MCU • RTOS • Technical English</h2>
-
-    <!-- 這個按鈕會連到 about.html -->
-   <a href="about.html" class="btn">About Me</a>
+    <p>Embedded Systems • MCU • RTOS • Technical English</p>
 </div>
 
-<div class="footer">
-    © 2026 Jason | Firmware Engineer in Progress
+<!-- 文章列表 -->
+<div class="container">
+
+    <h2>Latest Articles</h2>
+
+    <div class="post">
+        <h3><a href="post1.html">What is UART?</a></h3>
+        <p>Introduction to UART communication.</p>
+    </div>
+
+    <div class="post">
+        <h3><a href="post2.html">Understanding Interrupt</a></h3>
+        <p>How interrupts work in microcontrollers.</p>
+    </div>
+
 </div>
 
 </body>
