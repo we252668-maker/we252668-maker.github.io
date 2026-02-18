@@ -1,109 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
 <head>
-    <meta charset="UTF-8">
-    <title>Firmware Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>方柏傑 | 機電工程 × 嵌入式系統</title>
 
-    <!-- Google Analytics 開始 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-3H56552PZP');
-    </script>
-    <!-- Google Analytics 結束 -->
+<style>
+body{
+    margin:0;
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.8;
+}
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-        }
+header{
+    background:linear-gradient(135deg,#1e293b,#0f172a);
+    text-align:center;
+    padding:80px 20px;
+}
 
-        /* 封面區 */
-        .hero {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
+header h1{
+    font-size:42px;
+    margin:0;
+}
 
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+header p{
+    font-size:18px;
+    color:#94a3b8;
+}
 
-        .hero p {
-            font-size: 20px;
-            color: #dddddd;
-            margin-bottom: 30px;
-        }
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #00c6ff;
-            color: black;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.section-title{
+    font-size:24px;
+    border-left:4px solid #38bdf8;
+    padding-left:12px;
+    margin-bottom:20px;
+}
 
-        .btn:hover {
-            background: #00ffcc;
-            transform: translateY(-3px);
-        }
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:12px;
+    margin-bottom:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+.card:hover{
+    transform:translateY(-5px);
+}
 
-        .post {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
+.btn{
+    display:inline-block;
+    padding:14px 28px;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
+    border-radius:8px;
+    text-decoration:none;
+    margin-top:15px;
+    transition:0.3s;
+}
 
-        .post h3 {
-            margin: 0 0 10px 0;
-        }
+.btn:hover{
+    background:#0ea5e9;
+}
 
-        .post a {
-            text-decoration: none;
-            color: #0077cc;
-        }
+.skills span{
+    display:inline-block;
+    background:#334155;
+    padding:6px 12px;
+    border-radius:20px;
+    margin:5px;
+    font-size:14px;
+}
 
-        .post a:hover {
-            text-decoration: underline;
-        }
-
-    </style>
+footer{
+    background:#020617;
+    text-align:center;
+    padding:30px 20px;
+    color:#64748b;
+    font-size:14px;
+}
+</style>
 </head>
 
 <body>
 
-<div class="hero">
-    <h1>Firmware Learning Journey</h1>
-    <p>Embedded Systems • MCU • RTOS • Technical English</p>
-    <a href="about.html" class="btn">About Me</a>
-</div>
+<header>
+    <h1>方柏傑</h1>
+    <p>機電工程師 × 工安管理 × 嵌入式系統發展中</p>
+</header>
 
 <div class="container">
-    <h2>Latest Articles</h2>
 
-   <div class="post">
-    <h3><a href="post1.html">What is Arduino? From Beginner to Firmware Engineer</a></h3>
-    <p>Introduction to Arduino hardware, MCU architecture, and embedded fundamentals.</p>
-   </div>
+    <div class="section-title">專業簡介</div>
+    <div class="card">
+        具備 3+ 年高科技廠務與能源工程經驗，參與台積電、美光、矽品與 Ørsted 離岸風電等大型專案。
+        專精工安管理、ISO 系統導入與專案協調，目前攻讀資訊電機碩士，
+        研究嵌入式系統與能源控制應用，結合機電與韌體技術發展。
+    </div>
+
+    <div class="section-title">核心專長</div>
+    <div class="card skills">
+        <span>ISO45001 / ISO9001</span>
+        <span>JSA 風險評估</span>
+        <span>安衛計劃撰寫</span>
+        <span>專案協調管理</span>
+        <span>Arduino 控制</span>
+        <span>AutoCAD</span>
+        <span>能源監控系統</span>
+    </div>
+
+    <div class="section-title">工作經歷</div>
+    <div class="card">
+        <b>中科安全科技有限公司｜工安工程師</b><br>
+        美光 F16 / MTB 廠 管理職<br><br>
+
+        <b>竑越工程股份有限公司｜工程師</b><br>
+        Ørsted 離岸風電、台積電零廢中心<br><br>
+
+        <b>安承顧問管理有限公司｜勞安人員</b><br>
+        台積電 F15B 廠<br><br>
+
+        <b>柏揚系統科技股份有限公司｜助理工程師</b><br>
+        矽品廠房工程
+    </div>
+
+    <div class="section-title">專利與競賽</div>
+    <div class="card">
+        ✔ 環境與綠能監控系統<br>
+        ✔ 能源轉換效率量測系統<br>
+        ✔ 安全帽化學檢測<br>
+        ✔ 台灣技術創新博覽會銅牌
+    </div>
+
+    <div class="section-title">履歷下載</div>
+    <div class="card">
+        <a href="Resume_FangPoJie.pdf" class="btn" download>
+            📄 下載完整履歷 PDF
+        </a>
+    </div>
 
 </div>
+
+<footer>
+    📍 台中市神岡區 ｜ ✉️ we25266855@gmail.com ｜ © 2026 方柏傑
+</footer>
 
 </body>
 </html>
