@@ -133,6 +133,17 @@ footer{
         </div>
     </div>
 
+    <!-- 🔥 新增 Arduino Code（可展開） -->
+    <div class="card">
+        <h3 id="arduino-code-title" onclick="toggleArduinoCode()" style="cursor:pointer;">
+            ▶ Arduino Code
+        </h3>
+
+        <div class="article-list" id="arduino-code-articles" style="display:none;">
+            <a href="arduino-led.html">Arduino LED Blink - Code Download</a>
+        </div>
+    </div>
+
     <!-- 履歷 -->
     <div class="section-title" id="resume-title">履歷下載</div>
     <div class="card">
@@ -156,6 +167,7 @@ function setLang(lang){
         document.getElementById("tech-title").innerText = "Technical Articles";
         document.getElementById("mech-title").innerText = "▶ Mechatronics";
         document.getElementById("arduino-title").innerText = "▶ Arduino";
+        document.getElementById("arduino-code-title").innerText = "▶ Arduino Code";
         document.getElementById("resume-title").innerText = "Resume Download";
         document.getElementById("resume-btn").innerText = "📄 Download Resume PDF";
     } else {
@@ -164,6 +176,7 @@ function setLang(lang){
         document.getElementById("tech-title").innerText = "技術文章";
         document.getElementById("mech-title").innerText = "▶ 機電工程";
         document.getElementById("arduino-title").innerText = "▶ Arduino";
+        document.getElementById("arduino-code-title").innerText = "▶ Arduino Code";
         document.getElementById("resume-title").innerText = "履歷下載";
         document.getElementById("resume-btn").innerText = "📄 下載完整履歷 PDF";
     }
@@ -192,6 +205,19 @@ function toggleMech(){
     } else {
         list.style.display = "none";
         title.innerHTML = "▶ 機電工程";
+    }
+}
+
+function toggleArduinoCode(){
+    var list = document.getElementById("arduino-code-articles");
+    var title = document.getElementById("arduino-code-title");
+
+    if(list.style.display === "none"){
+        list.style.display = "block";
+        title.innerHTML = "▼ Arduino Code";
+    } else {
+        list.style.display = "none";
+        title.innerHTML = "▶ Arduino Code";
     }
 }
 
