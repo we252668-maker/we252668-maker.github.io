@@ -18,11 +18,29 @@ header{
     background:linear-gradient(135deg,#1e293b,#0f172a);
     text-align:center;
     padding:60px 20px;
+    position:relative;
 }
 
 header h1{
     margin:0;
     font-size:34px;
+}
+
+.lang-switch{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.lang-switch button{
+    padding:6px 12px;
+    margin-left:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
 }
 
 .container{
@@ -43,14 +61,6 @@ header h1{
     padding:30px;
     border-radius:12px;
     box-shadow:0 5px 20px rgba(0,0,0,0.3);
-}
-
-pre{
-    background:#0d1117;
-    padding:20px;
-    border-radius:8px;
-    overflow-x:auto;
-    color:#58a6ff;
 }
 
 .btn{
@@ -82,15 +92,21 @@ footer{
 <body>
 
 <header>
-    <h1>Arduino LED Blink Project</h1>
-    <p>GPIO Output Control × Basic Embedded System Practice</p>
+
+    <div class="lang-switch">
+        <button onclick="setLang('zh')">中文</button>
+        <button onclick="setLang('en')">English</button>
+    </div>
+
+    <h1 id="main-title">Arduino LED Blink Project</h1>
+    <p id="sub-title">GPIO Output Control × Basic Embedded System Practice</p>
 </header>
 
 <div class="container">
 
-    <div class="section-title">Project Overview</div>
+    <div class="section-title" id="overview-title">Project Overview</div>
     <div class="card">
-        <p>
+        <p id="overview-content">
             This project demonstrates basic GPIO control using Arduino.
             The LED blinking example is often the first step in embedded system learning,
             but here it is structured as a small firmware project with proper file organization
@@ -98,9 +114,9 @@ footer{
         </p>
     </div>
 
-    <div class="section-title">Technical Highlights</div>
+    <div class="section-title" id="tech-title">Technical Highlights</div>
     <div class="card">
-        <ul>
+        <ul id="tech-list">
             <li>Digital GPIO Output Control</li>
             <li>Use of pinMode() and digitalWrite()</li>
             <li>Understanding blocking delay()</li>
@@ -109,23 +125,15 @@ footer{
         </ul>
     </div>
 
-    <div class="section-title">Code Preview</div>
+    <div class="section-title" id="repo-title">GitHub Repository</div>
     <div class="card">
-<pre><code>
-
-</code></pre>
-    </div>
-
-    <div class="section-title">GitHub Repository</div>
-    <div class="card">
-        <p>
+        <p id="repo-desc">
             This project is maintained on GitHub with structured folder management
             and commit history for engineering practice demonstration.
         </p>
 
-        <!-- 🔥 請替換成你的 GitHub 連結 -->
         <a href="https://github.com/we252668-maker/we252668-maker.github.io/tree/main/arduino/led" 
-           target="_blank" class="btn">
+           target="_blank" class="btn" id="repo-btn">
            🔗 View Project on GitHub
         </a>
     </div>
@@ -136,5 +144,58 @@ footer{
     © 2026 Fang Po-Jie | Embedded Systems Portfolio
 </footer>
 
+<script>
+
+function setLang(lang){
+
+    if(lang === 'zh'){
+        document.getElementById("main-title").innerText = "Arduino LED Blink 專案介紹";
+        document.getElementById("sub-title").innerText = "GPIO 輸出控制 × 嵌入式基礎實作";
+
+        document.getElementById("overview-title").innerText = "專案說明";
+        document.getElementById("overview-content").innerText =
+            "本專案展示 Arduino 的基本 GPIO 控制方式。LED 閃爍是嵌入式系統學習的第一步，透過此專案理解腳位控制與主迴圈概念，同時以 GitHub 進行版本管理與專案展示。";
+
+        document.getElementById("tech-title").innerText = "技術重點";
+        document.getElementById("tech-list").innerHTML =
+            "<li>GPIO 數位輸出控制</li>" +
+            "<li>pinMode 與 digitalWrite 使用</li>" +
+            "<li>delay 阻塞式延遲概念</li>" +
+            "<li>setup / loop 架構理解</li>" +
+            "<li>GitHub 專案版本管理</li>";
+
+        document.getElementById("repo-title").innerText = "GitHub 專案連結";
+        document.getElementById("repo-desc").innerText =
+            "本專案已上傳至 GitHub，包含完整資料夾結構與版本紀錄，作為嵌入式工程展示用途。";
+
+        document.getElementById("repo-btn").innerText = "🔗 前往 GitHub 專案";
+    }
+    else{
+        document.getElementById("main-title").innerText = "Arduino LED Blink Project";
+        document.getElementById("sub-title").innerText = "GPIO Output Control × Basic Embedded System Practice";
+
+        document.getElementById("overview-title").innerText = "Project Overview";
+        document.getElementById("overview-content").innerText =
+            "This project demonstrates basic GPIO control using Arduino. The LED blinking example is often the first step in embedded system learning, structured here as a firmware mini project with version control.";
+
+        document.getElementById("tech-title").innerText = "Technical Highlights";
+        document.getElementById("tech-list").innerHTML =
+            "<li>Digital GPIO Output Control</li>" +
+            "<li>Use of pinMode() and digitalWrite()</li>" +
+            "<li>Understanding blocking delay()</li>" +
+            "<li>Basic embedded structure (setup / loop)</li>" +
+            "<li>GitHub version control practice</li>";
+
+        document.getElementById("repo-title").innerText = "GitHub Repository";
+        document.getElementById("repo-desc").innerText =
+            "This project is maintained on GitHub with structured folder management and commit history.";
+
+        document.getElementById("repo-btn").innerText = "🔗 View Project on GitHub";
+    }
+}
+
+</script>
+
 </body>
 </html>
+
