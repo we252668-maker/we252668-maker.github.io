@@ -111,17 +111,18 @@ footer{
     <!-- 技術文章區 -->
     <div class="section-title" id="tech-title">技術文章</div>
 
- <div class="card">
-    <h3 id="mech-title">
-         ▶機電工程
-    </h3>
+    <!-- 機電工程（可展開） -->
+    <div class="card">
+        <h3 id="mech-title" onclick="toggleMech()" style="cursor:pointer;">
+            ▶ 機電工程
+        </h3>
 
-    <div class="article-list" id="mech-articles">
-        <a href="mech-first-job.html">工程心得｜從三個月工程經驗，確立我的工程之路</a>
+        <div class="article-list" id="mech-articles" style="display:none;">
+            <a href="mech-first-job.html">工程心得｜從三個月工程經驗，確立我的工程之路</a>
+        </div>
     </div>
-</div>
 
-
+    <!-- Arduino（可展開） -->
     <div class="card">
         <h3 id="arduino-title" onclick="toggleArduino()" style="cursor:pointer;">
             ▶ Arduino
@@ -147,12 +148,13 @@ footer{
 </footer>
 
 <script>
+
 function setLang(lang){
     if(lang === 'en'){
         document.getElementById("name").innerText = "Fang Po-Jie";
         document.getElementById("title").innerText = "Mechatronics Engineer × Embedded Systems";
         document.getElementById("tech-title").innerText = "Technical Articles";
-        document.getElementById("mech-title").innerText = "Mechatronics Experience";
+        document.getElementById("mech-title").innerText = "▶ Mechatronics";
         document.getElementById("arduino-title").innerText = "▶ Arduino";
         document.getElementById("resume-title").innerText = "Resume Download";
         document.getElementById("resume-btn").innerText = "📄 Download Resume PDF";
@@ -160,7 +162,7 @@ function setLang(lang){
         document.getElementById("name").innerText = "方柏傑";
         document.getElementById("title").innerText = "機電工程師 × 工安管理 × 嵌入式系統發展中";
         document.getElementById("tech-title").innerText = "技術文章";
-        document.getElementById("mech-title").innerText = "▶機電工程";
+        document.getElementById("mech-title").innerText = "▶ 機電工程";
         document.getElementById("arduino-title").innerText = "▶ Arduino";
         document.getElementById("resume-title").innerText = "履歷下載";
         document.getElementById("resume-btn").innerText = "📄 下載完整履歷 PDF";
@@ -179,6 +181,20 @@ function toggleArduino(){
         title.innerHTML = "▶ Arduino";
     }
 }
+
+function toggleMech(){
+    var list = document.getElementById("mech-articles");
+    var title = document.getElementById("mech-title");
+
+    if(list.style.display === "none"){
+        list.style.display = "block";
+        title.innerHTML = "▼ 機電工程";
+    } else {
+        list.style.display = "none";
+        title.innerHTML = "▶ 機電工程";
+    }
+}
+
 </script>
 
 </body>
