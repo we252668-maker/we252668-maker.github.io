@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>從三個月工程經驗，確立我的工程之路</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.9;
+}
+
+header{
+    background:#1e293b;
+    padding:60px 20px;
+    text-align:center;
+    position:relative;
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+.lang-switch{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.lang-switch button{
+    padding:6px 12px;
+    margin-left:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#64748b;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="lang-switch">
+        <button onclick="setLang('zh')">中文</button>
+        <button onclick="setLang('en')">English</button>
+    </div>
+    <h1 id="title">從三個月工程經驗，確立我的工程之路</h1>
+</header>
+
+<div class="container">
+
+<div id="content">
+<p>
+剛開始踏入職場時，我進入了一間小型工程公司。
+雖然只待了短短三個月，卻成為我職涯方向最關鍵的轉折點。
+</p>
+
+<p>
+在那裡，我第一次真正接觸工程現場。
+從圖面理解、施工流程到現場協調，每一天都充滿挑戰。
+工程不只是理論，更是實務與溝通的結合。
+</p>
+
+<p>
+這段經驗讓我意識到自己對技術與系統整合的興趣，
+也確立了未來要持續在工程領域深耕的方向。
+</p>
+
+<p>
+有時候，短暫的經歷反而會帶來長遠的方向。
+</p>
+</div>
+
+<br>
+<a href="index.html">← 回首頁</a>
+
+</div>
+
+<footer>
+© 2026 Fang Po-Jie
+</footer>
+
+<script>
+function setLang(lang){
+    if(lang === 'en'){
+        document.getElementById("title").innerText =
+        "How Three Months in Engineering Shaped My Career Path";
+
+        document.getElementById("content").innerHTML =
+        "<p>At the beginning of my career, I joined a small engineering company. Although I stayed for only three months, it became a turning point in my professional journey.</p>" +
+        "<p>It was my first real exposure to engineering practice. From reading drawings to on-site coordination, every day was a challenge. Engineering is not just theory — it is the integration of practice and communication.</p>" +
+        "<p>This experience helped me discover my interest in technical systems and engineering integration, and it confirmed my decision to pursue a long-term career in engineering.</p>" +
+        "<p>Sometimes, even a short experience can determine a long-term direction.</p>";
+    } else {
+        document.getElementById("title").innerText =
+        "從三個月工程經驗，確立我的工程之路";
+
+        document.getElementById("content").innerHTML =
+        "<p>剛開始踏入職場時，我進入了一間小型工程公司。雖然只待了短短三個月，卻成為我職涯方向最關鍵的轉折點。</p>" +
+        "<p>在那裡，我第一次真正接觸工程現場。從圖面理解、施工流程到現場協調，每一天都充滿挑戰。工程不只是理論，更是實務與溝通的結合。</p>" +
+        "<p>這段經驗讓我意識到自己對技術與系統整合的興趣，也確立了未來要持續在工程領域深耕的方向。</p>" +
+        "<p>有時候，短暫的經歷反而會帶來長遠的方向。</p>";
+    }
+}
+</script>
+
+</body>
+</html>
