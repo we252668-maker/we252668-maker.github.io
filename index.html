@@ -114,14 +114,16 @@ footer{
     <div class="card">
         <h3 id="mech-title">機電工程經驗</h3>
         <div class="article-list" id="mech-articles">
-           
         </div>
     </div>
 
     <div class="card">
-        <h3 id="arduino-title">Arduino</h3>
-        <div class="article-list" id="arduino-articles">
-           
+        <h3 id="arduino-title" onclick="toggleArduino()" style="cursor:pointer;">
+            ▶ Arduino
+        </h3>
+
+        <div class="article-list" id="arduino-articles" style="display:none;">
+            <a href="arduino-intro.html">Arduino 是什麼？完整介紹</a>
         </div>
     </div>
 
@@ -146,7 +148,7 @@ function setLang(lang){
         document.getElementById("title").innerText = "Mechatronics Engineer × Embedded Systems";
         document.getElementById("tech-title").innerText = "Technical Articles";
         document.getElementById("mech-title").innerText = "Mechatronics Experience";
-        document.getElementById("arduino-title").innerText = "Arduino";
+        document.getElementById("arduino-title").innerText = "▶ Arduino";
         document.getElementById("resume-title").innerText = "Resume Download";
         document.getElementById("resume-btn").innerText = "📄 Download Resume PDF";
     } else {
@@ -154,9 +156,22 @@ function setLang(lang){
         document.getElementById("title").innerText = "機電工程師 × 工安管理 × 嵌入式系統發展中";
         document.getElementById("tech-title").innerText = "技術文章";
         document.getElementById("mech-title").innerText = "機電工程經驗";
-        document.getElementById("arduino-title").innerText = "Arduino ";
+        document.getElementById("arduino-title").innerText = "▶ Arduino";
         document.getElementById("resume-title").innerText = "履歷下載";
         document.getElementById("resume-btn").innerText = "📄 下載完整履歷 PDF";
+    }
+}
+
+function toggleArduino(){
+    var list = document.getElementById("arduino-articles");
+    var title = document.getElementById("arduino-title");
+
+    if(list.style.display === "none"){
+        list.style.display = "block";
+        title.innerHTML = "▼ Arduino";
+    } else {
+        list.style.display = "none";
+        title.innerHTML = "▶ Arduino";
     }
 }
 </script>
