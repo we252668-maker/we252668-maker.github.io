@@ -43,6 +43,24 @@ header h1{
     font-weight:bold;
 }
 
+/* ===== 新增 上一頁按鈕樣式 ===== */
+.back-btn{
+    position:absolute;
+    left:20px;
+    top:20px;
+    padding:8px 14px;
+    background:#334155;
+    color:#e2e8f0;
+    text-decoration:none;
+    border-radius:6px;
+    font-size:14px;
+}
+
+.back-btn:hover{
+    background:#475569;
+}
+/* ===== 新增結束 ===== */
+
 .container{
     max-width:900px;
     margin:auto;
@@ -92,6 +110,10 @@ footer{
 <body>
 
 <header>
+
+    <!-- ===== 新增 上一頁按鈕 ===== -->
+    <a href="javascript:history.back()" class="back-btn">← Back</a>
+    <!-- ===== 新增結束 ===== -->
 
     <div class="lang-switch">
         <button onclick="setLang('zh')">中文</button>
@@ -198,4 +220,5 @@ function setLang(lang){
 
 </body>
 </html>
+
 
