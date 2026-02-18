@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>方柏傑 | 機電工程 × 嵌入式系統</title>
+<title>Fang Po-Jie | Mechatronics × Embedded Systems</title>
 
 <style>
 body{
@@ -17,17 +17,35 @@ body{
 header{
     background:linear-gradient(135deg,#1e293b,#0f172a);
     text-align:center;
-    padding:80px 20px;
+    padding:70px 20px;
+    position:relative;
 }
 
 header h1{
-    font-size:42px;
+    font-size:40px;
     margin:0;
 }
 
 header p{
     font-size:18px;
     color:#94a3b8;
+}
+
+.lang-switch{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.lang-switch button{
+    padding:6px 12px;
+    margin-left:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
 }
 
 .container{
@@ -37,7 +55,7 @@ header p{
 }
 
 .section-title{
-    font-size:24px;
+    font-size:22px;
     border-left:4px solid #38bdf8;
     padding-left:12px;
     margin-bottom:20px;
@@ -49,11 +67,6 @@ header p{
     border-radius:12px;
     margin-bottom:25px;
     box-shadow:0 5px 20px rgba(0,0,0,0.3);
-    transition:0.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
 }
 
 .btn{
@@ -65,11 +78,6 @@ header p{
     border-radius:8px;
     text-decoration:none;
     margin-top:15px;
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#0ea5e9;
 }
 
 .skills span{
@@ -84,9 +92,13 @@ header p{
 footer{
     background:#020617;
     text-align:center;
-    padding:30px 20px;
+    padding:25px 20px;
     color:#64748b;
     font-size:14px;
+}
+
+.hidden{
+    display:none;
 }
 </style>
 </head>
@@ -94,56 +106,44 @@ footer{
 <body>
 
 <header>
-    <h1>方柏傑</h1>
-    <p>機電工程師 × 工安管理 × 嵌入式系統發展中</p>
+    <div class="lang-switch">
+        <button onclick="setLang('zh')">中文</button>
+        <button onclick="setLang('en')">English</button>
+    </div>
+
+    <h1 id="name">方柏傑</h1>
+    <p id="title">機電工程師 × 工安管理 × 嵌入式系統發展中</p>
 </header>
 
 <div class="container">
 
-    <div class="section-title">專業簡介</div>
-    <div class="card">
+    <div class="section-title" id="about-title">專業簡介</div>
+    <div class="card" id="about-content">
         具備 3+ 年高科技廠務與能源工程經驗，參與台積電、美光、矽品與 Ørsted 離岸風電等大型專案。
-        專精工安管理、ISO 系統導入與專案協調，目前攻讀資訊電機碩士，
-        研究嵌入式系統與能源控制應用，結合機電與韌體技術發展。
+        專精工安管理與 ISO 系統導入，目前攻讀資訊電機碩士，研究嵌入式系統與能源控制應用。
     </div>
 
-    <div class="section-title">核心專長</div>
+    <div class="section-title" id="skills-title">核心專長</div>
     <div class="card skills">
         <span>ISO45001 / ISO9001</span>
-        <span>JSA 風險評估</span>
-        <span>安衛計劃撰寫</span>
-        <span>專案協調管理</span>
-        <span>Arduino 控制</span>
+        <span>JSA Risk Assessment</span>
+        <span>Project Coordination</span>
+        <span>Arduino Control</span>
         <span>AutoCAD</span>
-        <span>能源監控系統</span>
+        <span>Energy Monitoring</span>
     </div>
 
-    <div class="section-title">工作經歷</div>
-    <div class="card">
-        <b>中科安全科技有限公司｜工安工程師</b><br>
-        美光 F16 / MTB 廠 管理職<br><br>
-
-        <b>竑越工程股份有限公司｜工程師</b><br>
-        Ørsted 離岸風電、台積電零廢中心<br><br>
-
-        <b>安承顧問管理有限公司｜勞安人員</b><br>
-        台積電 F15B 廠<br><br>
-
-        <b>柏揚系統科技股份有限公司｜助理工程師</b><br>
-        矽品廠房工程
+    <div class="section-title" id="experience-title">工作經歷</div>
+    <div class="card" id="experience-content">
+        中科安全科技有限公司｜工安工程師<br>
+        竑越工程股份有限公司｜工程師<br>
+        安承顧問管理有限公司｜勞安人員<br>
+        柏揚系統科技股份有限公司｜助理工程師
     </div>
 
-    <div class="section-title">專利與競賽</div>
+    <div class="section-title" id="resume-title">履歷下載</div>
     <div class="card">
-        ✔ 環境與綠能監控系統<br>
-        ✔ 能源轉換效率量測系統<br>
-        ✔ 安全帽化學檢測<br>
-        ✔ 台灣技術創新博覽會銅牌
-    </div>
-
-    <div class="section-title">履歷下載</div>
-    <div class="card">
-        <a href="Resume_FangPoJie.pdf" class="btn" download>
+        <a href="Resume_FangPoJie.pdf" class="btn" download id="resume-btn">
             📄 下載完整履歷 PDF
         </a>
     </div>
@@ -151,8 +151,39 @@ footer{
 </div>
 
 <footer>
-    📍 台中市神岡區 ｜ ✉️ we25266855@gmail.com ｜ © 2026 方柏傑
+    📍 Taichung, Taiwan ｜ ✉️ we25266855@gmail.com ｜ © 2026 Fang Po-Jie
 </footer>
+
+<script>
+function setLang(lang){
+    if(lang === 'en'){
+        document.getElementById("name").innerText = "Fang Po-Jie";
+        document.getElementById("title").innerText = "Mechatronics Engineer × Safety Management × Embedded Systems";
+        document.getElementById("about-title").innerText = "About Me";
+        document.getElementById("about-content").innerText =
+        "With 3+ years of experience in high-tech facility and energy engineering projects including TSMC, Micron, SPIL and Ørsted offshore wind. Specialized in safety management and ISO systems. Currently pursuing a Master's degree in Electrical and Computer Engineering, focusing on embedded systems and energy control.";
+        document.getElementById("skills-title").innerText = "Core Skills";
+        document.getElementById("experience-title").innerText = "Work Experience";
+        document.getElementById("experience-content").innerText =
+        "Safety Engineer | Zhongke Safety Tech\nEngineer | Hongyue Engineering\nSafety Staff | An-Cheng Consulting\nAssistant Engineer | Boyang System Tech";
+        document.getElementById("resume-title").innerText = "Resume Download";
+        document.getElementById("resume-btn").innerText = "📄 Download Resume PDF";
+    }
+    else{
+        document.getElementById("name").innerText = "方柏傑";
+        document.getElementById("title").innerText = "機電工程師 × 工安管理 × 嵌入式系統發展中";
+        document.getElementById("about-title").innerText = "專業簡介";
+        document.getElementById("about-content").innerText =
+        "具備 3+ 年高科技廠務與能源工程經驗，參與台積電、美光、矽品與 Ørsted 離岸風電等大型專案。專精工安管理與 ISO 系統導入，目前攻讀資訊電機碩士，研究嵌入式系統與能源控制應用。";
+        document.getElementById("skills-title").innerText = "核心專長";
+        document.getElementById("experience-title").innerText = "工作經歷";
+        document.getElementById("experience-content").innerText =
+        "中科安全科技有限公司｜工安工程師\n竑越工程股份有限公司｜工程師\n安承顧問管理有限公司｜勞安人員\n柏揚系統科技股份有限公司｜助理工程師";
+        document.getElementById("resume-title").innerText = "履歷下載";
+        document.getElementById("resume-btn").innerText = "📄 下載完整履歷 PDF";
+    }
+}
+</script>
 
 </body>
 </html>
