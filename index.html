@@ -5,6 +5,16 @@
     <title>Firmware Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Analytics 開始 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-3H56552PZP');
+    </script>
+    <!-- Google Analytics 結束 -->
+
     <style>
         body {
             margin: 0;
@@ -31,7 +41,6 @@
             margin-bottom: 30px;
         }
 
-        /* 按鈕樣式 */
         .btn {
             display: inline-block;
             padding: 12px 30px;
@@ -48,7 +57,6 @@
             transform: translateY(-3px);
         }
 
-        /* 文章區 */
         .container {
             max-width: 900px;
             margin: 40px auto;
@@ -81,24 +89,19 @@
 
 <body>
 
-<!-- 封面 -->
 <div class="hero">
     <h1>Firmware Learning Journey</h1>
     <p>Embedded Systems • MCU • RTOS • Technical English</p>
-
-    <!-- 新增按鈕 -->
     <a href="about.html" class="btn">About Me</a>
 </div>
 
-<!-- 文章列表 -->
 <div class="container">
-
     <h2>Latest Articles</h2>
 
    <div class="post">
     <h3><a href="post1.html">What is Arduino? From Beginner to Firmware Engineer</a></h3>
     <p>Introduction to Arduino hardware, MCU architecture, and embedded fundamentals.</p>
-</div>
+   </div>
 
 </div>
 
