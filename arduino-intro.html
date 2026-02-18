@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arduino Introduction | 方柏傑</title>
+
+<style>
+body{
+    margin:0;
+    font-family:"Microsoft JhengHei",sans-serif;
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.9;
+}
+
+header{
+    background:#1e293b;
+    padding:60px 20px;
+    text-align:center;
+    position:relative;
+}
+
+header h1{
+    margin:0;
+    font-size:32px;
+}
+
+.lang-switch{
+    position:absolute;
+    top:20px;
+    right:20px;
+}
+
+.lang-switch button{
+    padding:6px 12px;
+    margin-left:5px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    background:#38bdf8;
+    color:#0f172a;
+    font-weight:bold;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+a{
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#64748b;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="lang-switch">
+        <button onclick="setLang('zh')">中文</button>
+        <button onclick="setLang('en')">English</button>
+    </div>
+    <h1 id="article-title">Arduino 是什麼？給初學者的完整介紹</h1>
+</header>
+
+<div class="container">
+    <div id="article-content">
+        <p>
+        Arduino 是一個開源微控制器開發平台，結合硬體電路板與簡易程式環境，
+        讓使用者可以快速建立電子專案。
+        </p>
+
+        <p>
+        它的核心是微控制器（如 ATmega328P），透過程式控制 LED、馬達與感測器等裝置。
+        </p>
+
+        <p>
+        Arduino 的優勢在於開發簡單、社群龐大、學習門檻低，
+        非常適合嵌入式系統與控制工程入門。
+        </p>
+
+        <p>
+        基本架構包含 setup() 與 loop()，
+        讓程式流程清晰易懂。
+        </p>
+
+        <p>
+        對機電工程師而言，Arduino 是連接電路與程式控制的重要橋樑。
+        </p>
+    </div>
+
+    <br>
+    <a href="index.html">← 回首頁</a>
+</div>
+
+<footer>
+© 2026 Fang Po-Jie
+</footer>
+
+<script>
+function setLang(lang){
+    if(lang === 'en'){
+        document.getElementById("article-title").innerText =
+        "What is Arduino? A Complete Introduction for Beginners";
+
+        document.getElementById("article-content").innerHTML =
+        "<p>Arduino is an open-source microcontroller development platform combining hardware and a simple programming environment, allowing users to quickly build electronic projects.</p>" +
+        "<p>Its core is a microcontroller such as ATmega328P, which can control LEDs, motors, and sensors through programming.</p>" +
+        "<p>Arduino is popular because of its simplicity, strong community support, and low learning barrier. It is ideal for beginners in embedded systems and control engineering.</p>" +
+        "<p>The basic structure includes setup() and loop(), making program flow clear and easy to understand.</p>" +
+        "<p>For mechatronics engineers, Arduino serves as a bridge between circuit design and software control.</p>";
+    } else {
+        document.getElementById("article-title").innerText =
+        "Arduino 是什麼？給初學者的完整介紹";
+
+        document.getElementById("article-content").innerHTML =
+        "<p>Arduino 是一個開源微控制器開發平台，結合硬體電路板與簡易程式環境，讓使用者可以快速建立電子專案。</p>" +
+        "<p>它的核心是微控制器（如 ATmega328P），透過程式控制 LED、馬達與感測器等裝置。</p>" +
+        "<p>Arduino 的優勢在於開發簡單、社群龐大、學習門檻低，非常適合嵌入式系統與控制工程入門。</p>" +
+        "<p>基本架構包含 setup() 與 loop()，讓程式流程清晰易懂。</p>" +
+        "<p>對機電工程師而言，Arduino 是連接電路與程式控制的重要橋樑。</p>";
+    }
+}
+</script>
+
+</body>
+</html>
