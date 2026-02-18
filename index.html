@@ -21,15 +21,8 @@ header{
     position:relative;
 }
 
-header h1{
-    font-size:40px;
-    margin:0;
-}
-
-header p{
-    font-size:18px;
-    color:#94a3b8;
-}
+header h1{font-size:40px;margin:0;}
+header p{font-size:18px;color:#94a3b8;}
 
 .lang-switch{
     position:absolute;
@@ -69,6 +62,17 @@ header p{
     box-shadow:0 5px 20px rgba(0,0,0,0.3);
 }
 
+.article-list a{
+    display:block;
+    padding:10px 0;
+    color:#38bdf8;
+    text-decoration:none;
+}
+
+.article-list a:hover{
+    text-decoration:underline;
+}
+
 .btn{
     display:inline-block;
     padding:14px 28px;
@@ -80,25 +84,12 @@ header p{
     margin-top:15px;
 }
 
-.skills span{
-    display:inline-block;
-    background:#334155;
-    padding:6px 12px;
-    border-radius:20px;
-    margin:5px;
-    font-size:14px;
-}
-
 footer{
     background:#020617;
     text-align:center;
     padding:25px 20px;
     color:#64748b;
     font-size:14px;
-}
-
-.hidden{
-    display:none;
 }
 </style>
 </head>
@@ -117,30 +108,24 @@ footer{
 
 <div class="container">
 
-    <div class="section-title" id="about-title">專業簡介</div>
-    <div class="card" id="about-content">
-        具備 3+ 年高科技廠務與能源工程經驗，參與台積電、美光、矽品與 Ørsted 離岸風電等大型專案。
-        專精工安管理與 ISO 系統導入，目前攻讀資訊電機碩士，研究嵌入式系統與能源控制應用。
+    <!-- 技術文章區 -->
+    <div class="section-title" id="tech-title">技術文章</div>
+
+    <div class="card">
+        <h3 id="mech-title">機電工程經驗</h3>
+        <div class="article-list" id="mech-articles">
+           
+        </div>
     </div>
 
-    <div class="section-title" id="skills-title">核心專長</div>
-    <div class="card skills">
-        <span>ISO45001 / ISO9001</span>
-        <span>JSA Risk Assessment</span>
-        <span>Project Coordination</span>
-        <span>Arduino Control</span>
-        <span>AutoCAD</span>
-        <span>Energy Monitoring</span>
+    <div class="card">
+        <h3 id="arduino-title">Arduino</h3>
+        <div class="article-list" id="arduino-articles">
+           
+        </div>
     </div>
 
-    <div class="section-title" id="experience-title">工作經歷</div>
-    <div class="card" id="experience-content">
-        中科安全科技有限公司｜工安工程師<br>
-        竑越工程股份有限公司｜工程師<br>
-        安承顧問管理有限公司｜勞安人員<br>
-        柏揚系統科技股份有限公司｜助理工程師
-    </div>
-
+    <!-- 履歷 -->
     <div class="section-title" id="resume-title">履歷下載</div>
     <div class="card">
         <a href="Resume_FangPoJie.pdf" class="btn" download id="resume-btn">
@@ -158,27 +143,18 @@ footer{
 function setLang(lang){
     if(lang === 'en'){
         document.getElementById("name").innerText = "Fang Po-Jie";
-        document.getElementById("title").innerText = "Mechatronics Engineer × Safety Management × Embedded Systems";
-        document.getElementById("about-title").innerText = "About Me";
-        document.getElementById("about-content").innerText =
-        "With 3+ years of experience in high-tech facility and energy engineering projects including TSMC, Micron, SPIL and Ørsted offshore wind. Specialized in safety management and ISO systems. Currently pursuing a Master's degree in Electrical and Computer Engineering, focusing on embedded systems and energy control.";
-        document.getElementById("skills-title").innerText = "Core Skills";
-        document.getElementById("experience-title").innerText = "Work Experience";
-        document.getElementById("experience-content").innerText =
-        "Safety Engineer | Zhongke Safety Tech\nEngineer | Hongyue Engineering\nSafety Staff | An-Cheng Consulting\nAssistant Engineer | Boyang System Tech";
+        document.getElementById("title").innerText = "Mechatronics Engineer × Embedded Systems";
+        document.getElementById("tech-title").innerText = "Technical Articles";
+        document.getElementById("mech-title").innerText = "Mechatronics Experience";
+        document.getElementById("arduino-title").innerText = "Arduino";
         document.getElementById("resume-title").innerText = "Resume Download";
         document.getElementById("resume-btn").innerText = "📄 Download Resume PDF";
-    }
-    else{
+    } else {
         document.getElementById("name").innerText = "方柏傑";
         document.getElementById("title").innerText = "機電工程師 × 工安管理 × 嵌入式系統發展中";
-        document.getElementById("about-title").innerText = "專業簡介";
-        document.getElementById("about-content").innerText =
-        "具備 3+ 年高科技廠務與能源工程經驗，參與台積電、美光、矽品與 Ørsted 離岸風電等大型專案。專精工安管理與 ISO 系統導入，目前攻讀資訊電機碩士，研究嵌入式系統與能源控制應用。";
-        document.getElementById("skills-title").innerText = "核心專長";
-        document.getElementById("experience-title").innerText = "工作經歷";
-        document.getElementById("experience-content").innerText =
-        "中科安全科技有限公司｜工安工程師\n竑越工程股份有限公司｜工程師\n安承顧問管理有限公司｜勞安人員\n柏揚系統科技股份有限公司｜助理工程師";
+        document.getElementById("tech-title").innerText = "技術文章";
+        document.getElementById("mech-title").innerText = "機電工程經驗";
+        document.getElementById("arduino-title").innerText = "Arduino ";
         document.getElementById("resume-title").innerText = "履歷下載";
         document.getElementById("resume-btn").innerText = "📄 下載完整履歷 PDF";
     }
